@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial￾scale=1.0">
+  <title>Dynamic Dropdown Menu</title>
+</head>
+<body>
+
+
+<!-- Navigation menu with dropdowns -->
+<ul id="menu">
+  <li onmouseover="showDropdown(0)" onmouseout="hideDropdown(0)">
+    <a href="#">Home</a>
+    <ul id="submenu0" class="submenu">
+      <li><a href="#">Submenu 1</a></li>
+      <li><a href="#">Submenu 2</a></li>
+      <li><a href="#">Submenu 3</a></li>
+    </ul>
+  </li>
+  <li onmouseover="showDropdown(1)" onmouseout="hideDropdown(1)">
+    <a href="#">Services</a>
+    <ul id="submenu1" class="submenu">
+      <li><a href="#">Submenu 4</a></li>
+      <li><a href="#">Submenu 5</a></li>
+      <li><a href="#">Submenu 6</a></li>
+    </ul>
+  </li>
+
+  <li onmouseover="showDropdown(2)" onmouseout="hideDropdown(2)">
+    <a href="#">Contact</a>
+    <ul id="submenu2" class="submenu">
+      <li><a href="#">Submenu 7</a></li>
+      <li><a href="#">Submenu 8</a></li>
+      <li><a href="#">Submenu 9</a></li>
+    </ul>
+  </li>
+
+</ul>
+
+
+<script>
+  // JavaScript code to toggle the visibility of dropdowns
+  // Function to show the dropdown
+  function showDropdown(index) {
+    const submenu = document.getElementById(`submenu${index}`);
+    submenu.style.display = "block";
+  }
+  // Function to hide the dropdown
+  function hideDropdown(index) {
+    const submenu = document.getElementById(`submenu${index}`);
+    submenu.style.display = "none";
+  }
+</script>
+
+
+</body>
+</html>
